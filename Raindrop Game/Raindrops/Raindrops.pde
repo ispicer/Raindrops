@@ -1,7 +1,10 @@
-Rain[] r = new Rain[100];
+Rain[] r = new Rain[500];
+int oldTime, index;
 
 void setup() {
-  size(500, 500);
+  size(displayWidth, displayHeight);
+  oldTime = 0;
+  index = 0;
   for (int i = 0; i < r.length; i++) {
     r[i] = new Rain();
   }
@@ -9,8 +12,12 @@ void setup() {
 
 void draw() {
   background(100, 200, 255);
-  for (int i = 0; i < r.length; i++) {
+  for (int i = 0; i < index; i++) {
     r[i].display();
     r[i].fall();
+  } 
+  if (millis()-oldTime >= 500) {
+    index++;
+    oldTime=millis();
   }
 }
