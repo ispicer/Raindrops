@@ -10,7 +10,7 @@ class Rain {
   }
 
   void display() {
-    fill(0, 0, 255);
+    fill(random(255), random(255), random(255));
     ellipse(loc.x, loc.y, d, d);
   }
 

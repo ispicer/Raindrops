@@ -1,4 +1,5 @@
 Rain[] r = new Rain[500];
+Catcher[] c = new Catcher;
 int oldTime, index;
 
 void setup() {
@@ -20,4 +21,5 @@ void draw() {
     index++;
     oldTime=millis();
   }
+  c.show();
 }
