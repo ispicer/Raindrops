@@ -1,6 +1,7 @@
-class Rain {
+ class Rain {
   PVector loc, vel, acc;
   int d;
+  int checkCatch;
 
   Rain() {
     loc = new PVector(random(width), 0);
@@ -24,4 +25,11 @@ class Rain {
       acc.x *= -acc.x;
     }
   }
+  void checkCatch(Catcher c) {
+    if (loc.dist(c.loc) < d/2 + c.d/2) {
+      checkCatch = true;
+      loc.x = random(width + 10, width + 1000);
+    }
+  }
 }
+

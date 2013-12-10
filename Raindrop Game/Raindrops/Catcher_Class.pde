@@ -3,9 +3,9 @@ class Catcher {
   PVector loc, vel;
   int d;
 
-  void setup() {
+  Catcher() {
     loc = new PVector(width/2, height);
-    vel = new PVector(3, 0);
+    vel = new PVector(10, 0);
     d = 100;
   }
 
@@ -15,10 +15,10 @@ class Catcher {
      if (keyPressed) {
       if (key == CODED) {
         if (keyCode == LEFT) {
-          loc.add(vel);
+          loc.sub(vel);
         }
         if (keyCode == RIGHT) {
-          loc.sub(vel);
+          loc.add(vel);
         }
       }
     }

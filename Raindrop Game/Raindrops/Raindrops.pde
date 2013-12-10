@@ -1,14 +1,16 @@
 Rain[] r = new Rain[500];
-Catcher[] c = new Catcher;
+Catcher c;
 int oldTime, index;
+int score = 0;
 
 void setup() {
-  size(displayWidth, displayHeight);
+  size(1000, 800);
   oldTime = 0;
   index = 0;
   for (int i = 0; i < r.length; i++) {
     r[i] = new Rain();
   }
+  c = new Catcher();
 }
 
 void draw() {
@@ -16,6 +18,7 @@ void draw() {
   for (int i = 0; i < index; i++) {
     r[i].display();
     r[i].fall();
+    r[i].checkCatch(c);
   } 
   if (millis()-oldTime >= 500) {
     index++;
@@ -23,3 +26,4 @@ void draw() {
   }
   c.show();
 }
+
