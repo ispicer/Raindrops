@@ -1,4 +1,4 @@
- class Rain {
+class Rain {
   PVector loc, vel, acc;
   int d;
   int checkCatch;
@@ -31,4 +31,3 @@
     }
   }
 }
-
