@@ -4,7 +4,7 @@ int oldTime, index;
 int score = 0;
 
 void setup() {
-  size(1000, 800);
+  size(displayWidth, displayHeight);
   oldTime = 0;
   index = 0;
   for (int i = 0; i < r.length; i++) {

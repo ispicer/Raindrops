@@ -27,7 +27,6 @@
   }
   void checkCatch(Catcher c) {
     if (loc.dist(c.loc) < d/2 + c.d/2) {
-      checkCatch = true;
       loc.x = random(width + 10, width + 1000);
     }
   }
