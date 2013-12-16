@@ -23,6 +23,9 @@ void draw() {
     i.Start();
     i.instructions();
   }
+  if (mousePressed && mouseX > width/2 - 500 && mouseX < width/2 - 400 && mouseY < height/2 - 250 && mouseY > height/2 - 150) {
+    intro = false;
+  }
   if (intro = false) {
     background(100, 200, 255);
     for (int i = 0; i < index; i++) {
@@ -37,4 +40,3 @@ void draw() {
     c.show();
   }
 }
-

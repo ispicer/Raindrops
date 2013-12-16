@@ -15,20 +15,23 @@ class Intro {
 
   void display() {
     textSize(50);
+    background(0);
     strokeWeight(10);
     textAlign(CENTER);
     text("Link's Rupee Challenge", width/2, 50);
     imageMode(CENTER);
     image(Link, width/2, height/2, 800, 700);
-    fill(0, 0, 255);
+    fill(10, 120, 39);
   }
 
   void Start() {
     image(Sword, width/2 - 550, height/2 - 200, 100, 400);
+    text("Start", width/2 - 550, height/2 + 50);
   }
 
   void instructions() {
     image(Shield, width/2 + 500, height/2 - 200, 300, 400);
+    text("Instructions", width/2 + 500, height/2 + 50);
   }
 }
 
