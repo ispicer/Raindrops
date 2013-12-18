@@ -5,7 +5,7 @@ class Catcher {
 
   Catcher() {
     loc = new PVector(width/2, height);
-    vel = new PVector(10, 0);
+    vel = new PVector(20, 0);
     d = 100;
   }
 

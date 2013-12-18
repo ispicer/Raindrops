@@ -18,15 +18,15 @@ void setup() {
 }
 
 void draw() {
-  if (intro = true) {
+  if (intro == true) {
     i.display();
     i.Start();
     i.instructions();
   }
-  if (mousePressed && mouseX > width/2 - 500 && mouseX < width/2 - 400 && mouseY < height/2 - 250 && mouseY > height/2 - 150) {
+  if(mousePressed && mouseX > width/2 - 600 && mouseX < width/2 - 400 && mouseY < height/2 + 50 && mouseY > height/2 + 10){
     intro = false;
   }
-  if (intro = false) {
+  if (intro == false) {
     background(100, 200, 255);
     for (int i = 0; i < index; i++) {
       r[i].display();
@@ -40,3 +40,6 @@ void draw() {
     c.show();
   }
 }
+
+
+
