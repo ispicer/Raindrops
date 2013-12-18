@@ -1,14 +1,20 @@
-class Game Over {
+class Over {
 
-  PVector loc, vel;
+  PVector gan, vel;
   PImage Ganondorf;
   PImage Link;
 
-  Game Over() {
-    loc = new PVector;
+  Over() {
+    gan = new PVector(width/2 + 400, height/2 + 200);
+    lin = new PVector(width/2, height);
     Ganondorf = loadImage("Ganondorf Game Over.png");
     Link = loadImage("Game Over Link.png");
   }
-  
-  void Ganondorf {
-    
+
+  void Display() {
+    background(0); 
+    image(Ganondorf, gan.x, gan.y);
+    image(Link, 
+  }
+}
+
